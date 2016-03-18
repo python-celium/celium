@@ -6,7 +6,6 @@ A trusted Python task runner.
 :license: BSD, see LICENSE for more details.
 """
 from collections import deque
-from weakref import WeakValueDictionary
 
 
 class Queue(deque):
@@ -16,7 +15,7 @@ class Queue(deque):
     classic containers such as list.
 
     A queue push messages to the right of the container and the messages stored are consumed
-    from the left side getting a LIFO implementation.
+    from the left side getting a FIFO implementation.
 
     Queues are created automatically by the :func:`celium.broker.queue.QueuesHandler.queue`.
     """
